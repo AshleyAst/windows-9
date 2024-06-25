@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'"> -->
+    <title>Windows 9 - Home</title>
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="../style/body.css">
+    <link rel="icon" type="image/x-icon" href="../icon/logo.ico">
+  </head>
+  <body>
+
+    <style>
+        body {
+          overflow-y: hidden;
+          overflow-x: hidden;
+          background-image: image-set("../images/home-background.png");
+          background-repeat: no-repeat;
+          background-size: cover
+        }
+        
+   .btn.btn--primary,
+   button.btn--primary,
+   input[type="submit"].btn--primary,
+   input[type="reset"].btn--primary,
+   input[type="button"].btn--primary {
+       background   : var(--color-btn-primary);
+       border-color : var(--color-btn-primary);
+       color        : var(--color-btn-primary-text);
+   }
+  
+   .btn,
+   button,
+   input[type="submit"],
+   input[type="reset"],
+   input[type="button"] {
+       --btn-height            : var(--vspace-btn);
+       display                 : inline-block;
+       font-family             : var(--font-1);
+       font-weight             : 500;
+       font-size               : var(--text-xs);
+       text-transform          : uppercase;
+       letter-spacing          : .35em;
+       height                  : var(--btn-height);
+       line-height             : calc(var(--btn-height) - 4px);
+       padding                 : 0 3.6rem;
+       margin                  : 0 0.4rem var(--vspace-0_5) 0;
+       color                   : var(--color-btn-text);
+       text-decoration         : none;
+       text-align              : center;
+       white-space             : nowrap;
+       cursor                  : pointer;
+       transition              : all .3s;
+       border-radius           : var(--border-radius);
+       background-color        : var(--color-btn);
+       border                  : 2px solid var(--color-btn);
+       -webkit-font-smoothing  : antialiased;
+       -moz-osx-font-smoothing : grayscale;
+   }
+   
+   .btn:focus,
+   button:focus,
+   input[type="submit"]:focus,
+   input[type="reset"]:focus,
+   input[type="button"]:focus,
+   .btn:hover,
+   button:hover,
+   input[type="submit"]:hover,
+   input[type="reset"]:hover,
+   input[type="button"]:hover {
+       background-color : var(--color-btn-hover);
+       border-color     : var(--color-btn-hover);
+       color            : var(--color-btn-hover-text);
+       outline          : 0;
+   }
+    </style>
+
+    <style>
+        /* Place the navbar at the bottom of the page, and make it stick */
+.navbar {
+  background-color: #000000;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.navbar-2 {
+  background-color: #0000006b;
+  overflow: hidden;
+  position: fixed;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+}
+    </style>
+
+    <footer style="height: min-content; width: max-content;">
+        <div id="home-end">
+            <div class="navbar-2" id="apps">
+              <script src="../renderer.js" type="text/javascript"></script>
+              <a href="../data/home.html" style="color: whitesmoke;"><img src="../icon/windows.png" style="inline-size: 100px; background-color: #201f1fc7;"> <p style="inline-size: 50px; text-align: middle;"> Home </p> </a>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- <script type='text/javascript'>
+      document.getElementById('error').addEventListener('ended',myHandler,false);
+      function myHandler(e) {
+          window.location.href = "./error.html"
+      }
+    </script> -->
+  </body>
+</html>

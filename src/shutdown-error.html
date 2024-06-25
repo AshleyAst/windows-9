@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'"> -->
+    <title>Windows 9 - Shutting Down</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="./style/body.css">
+    <link rel="icon" type="image/x-icon" href="./icon/logo.ico">
+  </head>
+  <body>
+    <video autoplay muted id="error">
+      <source src="./video/shut-seq2.mp4" type="video/mp4">
+    </video>
+
+    <script type='text/javascript'>
+      document.getElementById('error').addEventListener('ended',myHandler,false);
+      function myHandler(e) {
+          window.location.href = "./error.html"
+      }
+    </script>
+  </body>
+</html>
