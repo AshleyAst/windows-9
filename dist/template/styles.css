@@ -1,0 +1,34 @@
+body{
+    	overflow: hidden;
+        	height: 100vh;
+            }
+            .taskbar{
+            	background-color: #F3F3F3;
+                	width: 100%;
+                    	position: absolute;
+                        	bottom: 0;
+                            	display: flex;
+                                	z-index: 110;
+                                    	justify-content: center;
+                                        }
+                                        .right{
+                                        	justify-self: flex-end;
+                                            	position: absolute;
+                                                	right: 0;
+                                                    	margin: 6px 0;
+                                                        	height: 85%;
+                                                            } 
+                                                            .startmenu{
+                                                            	position: absolute;
+                                                                	bottom: -655px;
+                                                                    	width: 100%;
+                                                                        	text-align: center;
+                                                                            	transition: all 0.3s ease-in; 
+                                                                                }
+                                                                                .startmenu img{
+                                                                                	border-radius: 8px;
+                                                                                    }
+                                                                                    .wallpaper img{
+                                                                                    	height: 900px;
+                                                                                        }
+
