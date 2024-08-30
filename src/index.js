@@ -26,22 +26,11 @@ const createWindow = () => {
     // electron app into an executable.
 
     // From: Past Me
-    icon: './icon/logo.jpg',
+    icon: path.join('icon/logo.jpg'),
   });
 
-  sound.play("./windows/background-sounds.mp3", 100);
-
-  if (fs.existsSync('../build-packages.json')) {
-    mainWindow.loadFile(path.join(__dirname, 'shutdown-error.html'));
-  } else {
-    mainWindow.loadFile(path.join(__dirname, 'index.html'));
-    // secondWindow.loadFile(path.join(__dirname, './data/script.html'));
-  }
-  
-
+  mainWindow.loadFile(path.join('base/index.html'));
 };
-
-import("./apps.mjs");
 
 app.whenReady().then(() => {
   createWindow();
@@ -51,14 +40,7 @@ app.whenReady().then(() => {
       createWindow();
     }
   });
-
-  ipcMain.handle('back', () => document.location.href = "./data/home.html")
 });
-
-
-ipcMain.on('close', () => {
-  app.quit()
-})
 
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
